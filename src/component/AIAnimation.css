@@ -1,0 +1,76 @@
+AIAnimations.css
+.animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Prevents interaction with the images */
+  }
+  
+  .animated-image {
+    position: absolute;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    opacity: 0.8; /* Adjust opacity as needed */
+    animation: move 10s linear infinite; /* Base animation duration */
+    pointer-events: none; /* Prevents interaction with the images */
+  }
+  
+  /* Keyframes for animation */
+  @keyframes move {
+    0% {
+      transform: translateX(-100px) scale(0.5); /* Start from left with scale */
+      opacity: 0; /* Start invisible */
+    }
+    50% {
+      opacity: 1; /* Fade in */
+    }
+    100% {
+      transform: translateX(100vw) scale(1.5); /* Move to the right and scale */
+      opacity: 0; /* Fade out */
+    }
+  }
+  
+  /* Randomize the direction and animation duration */
+  .animated-image:nth-child(odd) {
+    animation-duration: 8s;
+    animation-name: move-left; /* Animation for images coming from left */
+  }
+  
+  .animated-image:nth-child(even) {
+    animation-duration: 12s;
+    animation-name: move-right; /* Animation for images coming from right */
+  }
+  
+  /* Keyframes for images coming from the right */
+  @keyframes move-left {
+    0% {
+      transform: translateX(-100px) scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100vw) scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  /* Keyframes for images coming from the left */
+  @keyframes move-right {
+    0% {
+      transform: translateX(100vw) scale(0.5); /* Start from right with scale */
+      opacity: 0; /* Start invisible */
+    }
+    50% {
+      opacity: 1; /* Fade in */
+    }
+    100% {
+      transform: translateX(-100px) scale(1.5); /* Move to the left and scale */
+      opacity: 0; /* Fade out */
+    }
+  }
+  

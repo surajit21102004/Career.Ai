@@ -1,0 +1,37 @@
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Ensure main container has proper padding */
+  
+  
+    /* Header adjustments */
+    h2 {
+      font-size: 1.5rem; /* Reduce header size for mobile */
+      margin-bottom: 1rem; /* Adjust margin */
+    }
+  
+    /* Input and button styles for mobile */
+    input[type="text"] {
+      width: 100%; /* Full width on mobile */
+      margin-bottom: 1rem; /* Spacing between input and button */
+    }
+  
+    button {
+      width: 100%; /* Full width for button on mobile */
+    }
+  
+    /* Stack the flex container vertically */
+    .flex {
+      flex-direction: column; /* Stack flex items vertically */
+    }
+  
+    /* Result card adjustments */
+    .bg-gray-800 {
+      padding: 1.5rem; /* More padding for mobile */
+    }
+  
+    /* Center-align elements for better appearance on mobile */
+    .text-center {
+      text-align: center; /* Center align text */
+    }
+  }
+  

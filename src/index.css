@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a {
+  color: white; /* Default color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Styles for the Book Session link */
+.book-session {
+  background-color: black; /* Default background */
+  color: white; /* Default text color */
+  border-radius: 4px; /* Optional: Rounded corners */
+  padding: 8px 16px; /* Add some padding */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.book-session{
+  background-color: #C6FE1E; /* Change background color to bright green on hover */
+  color: black; /* Change text color to black on hover */
+  font-weight: bold; /* Ensure text is bold on hover */
+}
+
+.navbar a:hover {
+  color: #61dafb; /* Change to your desired hover color for other links */
+}
+
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust transparency as needed */
+}
+
+@media (max-width: 768px) {
+  /* Mobile styles */
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Add any specific styles for icons or text here if needed */
+.text-white {
+  color: white; /* Ensure text is white for visibility */
+}
